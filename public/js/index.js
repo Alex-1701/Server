@@ -182,6 +182,11 @@ function getData(){
   var userStatus = localStorage.getItem("userStatus")
   var userId = localStorage.getItem("userId")
 
+  temp = new Date(dateData.value)
+  console.log(temp.getDate())
+  console.log(temp.getMonth() + 1)
+  console.log(temp.getFullYear())
+
   var reguestObject = {
     user: {
       login: userLogin,
@@ -189,9 +194,9 @@ function getData(){
       id: userId,
     },
     option: optionData.value,
-    value: dateData.value
+    value: temp.day
   }
-  //console.log(reguestObject)
+  console.log(reguestObject)
 
   url = "http://localhost:3000/commonpost"
 
