@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Welcome</title> 
+  </head>
+
+  <body>
+    <div id="sign_in_form">
+      <div>
+        <p>Введите свой логин</p>
+        <input id="login" type="text"></input>
+      </div>
+    
+      <div>
+        <p>Введите свой пароль</p>
+        <input id="password" type="text"></input>
+      </div>
+    
+      <div>
+          <button onclick="signIn()">Войти</button>
+      </div>
+      
+      <div>
+          <button onclick="document.getElementById('register_form').style.display = 'block'; document.getElementById('sign_in_form').style.display = 'none'">Зарегистрироваться</button>
+      </div>
+    </div>
+
+    <div id="register_form" style="display: none">
+      <div><p>Выберите ваш статус:</p></div>
+      
+      <p><input type="radio" name="status_button" value="Student" checked onchange="document.getElementById('status_text').innerHTML='Введите номер вашей зачётной книжки'">студент</p>
+      <p><input type="radio" name="status_button" value="Teacher" onchange="document.getElementById('status_text').innerHTML='Введите номер вашего паспорта'">преподаватель</p>
+      <p><input type="radio" name="status_button" value="DepartmentManager" onchange="document.getElementById('status_text').innerHTML='Введите номер вашего паспорта'">зав кафедры</p>
+      <p><input type="radio" name="status_button" value="FacultyManager" onchange="document.getElementById('status_text').innerHTML='Введите номер вашего паспорта'">декан</p>
+
+      <div>
+        <p id='status_text'>Введите номер вашей зачётной книжки</p>
+        <input id="user_id" type="text"></input>
+      </div>
+
+      <div>
+        <p>Введите свой логин</p>
+        <input id="user_login" type="text"></input>
+      </div>
+    
+      <div>
+        <p>Введите свой пароль</p>
+        <input id="user_password" type="text"></input>
+      </div>
+
+      <div>
+        <button onclick="register()">Зарегистрироваться</button>
+      </div>
+
+      <div>
+        <button onclick="updateStatus()">Отмена</button>
+      </div>
+
+    </div>
+
+    <div id="main_workspace" style="display: block">
+
+      <div class="workspace">
+        <span>текущий статус: </span>
+        <span id="status"></span>
+      </div>
+
+      <div class="workspace">
+        <div>
+          <div>
+            <span>Выберите действие из списка</span>
+            <span>
+              <select id="options_menu" style="display: inline;" onchange="setOptionsSelect()">
+                <option class="wss" id="select_S" value="getJournal">Просмотреть журнал группы</option>
+                <option class="wss" id="select_S/T/A/FM/DM" value="common">Общий</option>
+                <!--
+                <option class="wss" id="select_S/T/A/FM/DM">Общий</option>
+                <option class="wss" id="select_S/T">Студент и учитель</option>
+                <option class="wss" id="select_T">Учитель</option>
+                <option class="wss" id="select_A">Админ</option>
+                <option class="wss" id="select_DM">Заведующий кафедры</option>
+                <option class="wss" id="select_FM">Декан(Зав факультета)</option>-->
+              </select>
+            </span>
+          </div>
+          <div id="select_options" style="display: block;">
+            <span><input class="selectors" id="select_date" type="date" value="2021-05-20"  style="display: none;"></span>
+            <span><input class="selectors" id="input_text" type="text"    style="display: none;"></span>
+            <span><button class="selectors" id="get_data_button" onclick="getData()"           style="display: none;">Получить</button></span>
+            <!--<span><input type="submit" value="Отправить"></span>-->
+          </div>
+        </div>
+        
+        <h1>workspace</h1>
+        <pre id="blank_field">       
+        </pre>
+        
+      </div>
+
+      <div class="workspace">
+        <button id="logout_button" onclick="signOut()">Выйти</button>
+      </div>
+      
+    </div>
+
+    <script src="js/index.js"></script>
+    <!--<script src="js/student.js"></script>-->
+  </body>
+</html>
