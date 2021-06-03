@@ -26,7 +26,7 @@ function signIn() {
   // Функция инициирует обновление рабочего простанства.
   var login = document.getElementById("login").value;
   var password = document.getElementById("password").value;
-  var url = "http://localhost:3000/signin" + "?login=" + login + "&password=" + password
+  var url = "http://localhost:8080/signin" + "?login=" + login + "&password=" + password
   fetch(url, {
     method: 'GET', 
     mode: 'no-cors',
@@ -64,7 +64,7 @@ function register() {
       }
     }
   }
-  url = "http://localhost:3000/register"
+  url = "http://localhost:8080/register"
   fetch(url, {
     method: 'POST', 
     headers: {
@@ -178,7 +178,7 @@ function getData(){
   
   console.log("request:")
   console.log(reguestObject)
-  url = "http://localhost:3000/commonpost"
+  url = "http://localhost:8080/commonpost"
   fetch(url, {
     method: 'POST', 
     headers: {
@@ -250,7 +250,7 @@ function updateWorkspace() {
 }
 function selectGroupSetOptions() {
   // Генерирует выпадающий список групп
-  url = "http://localhost:3000/get_groups"
+  url = "http://localhost:8080/get_groups"
   fetch(url, {
     method: 'GET', 
     headers: {
