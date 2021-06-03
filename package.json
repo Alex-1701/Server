@@ -9,7 +9,7 @@
   "description": "test server",
   "main": "server.js",
   "scripts": {
-    "start": "index.js",
+    "start": "node server.js",
     "test": "lol"
   },
   "repository": {
