@@ -12,10 +12,17 @@ app.use('/static', express.static(__dirname + '/public'));
 // Подключение модуля для обработки запросов
 const processing = require("./part")
 //#endregion 
+
+app.get('/lol', (req, res) => {
+  console.log("lol")
+  res.send("lol")
+});
+
 app.get('/', (req, res) => {
   console.log("reload page")
   res.sendFile(__dirname + "/authorisation.html")
 });
+
 app.use("/signin", function(req, res){
   console.log("signin")
   let db = openDatabase()
@@ -49,6 +56,7 @@ app.use("/signin", function(req, res){
     console.log('Close the database connection.');
   });
 });
+
 app.post("/register", async function(req, res){
   console.log("start registration")
   
@@ -148,6 +156,7 @@ app.post("/register", async function(req, res){
     console.log('Close the database connection.');
   });
 });
+
 app.post('/commonpost', async function(req, res){
   // КОРОЧЕ
   // Идея вот в чём: все запросы на работу с данными формируются 
@@ -185,6 +194,7 @@ app.post('/commonpost', async function(req, res){
       break;
   }
 });
+
 app.get("/get_groups", (req, res) => {
   console.log("Getting groups list")
   let db = openDatabase()
@@ -207,9 +217,11 @@ app.get("/get_groups", (req, res) => {
     }
   })
 });
+
 app.listen(port, () => {
   console.log("localhost server start")
 });
+
 function openDatabase() {
   let db = new sqlite3.Database('dataBase.db', sqlite3.OPEN_READWRITE, (err) => {
     if (err) {

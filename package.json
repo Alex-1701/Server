@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "test server",
+  "main": "server.js",
+  "scripts": {
+    "test": "lol",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-1701/Server.git"
+  },
+  "keywords": [
+    "server",
+    "tets"
+  ],
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-1701/Server/issues"
+  },
+  "homepage": "https://github.com/Alex-1701/Server#readme"
+}
