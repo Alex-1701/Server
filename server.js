@@ -158,7 +158,7 @@ app.post("/register", async function(req, res){
     }
     console.log('Close the database connection.');
   });
-});
+}); 
 
 app.post('/commonpost', async function(req, res){
   // КОРОЧЕ
