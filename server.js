@@ -4,7 +4,7 @@ const app = express()
 const port = 8080
 //const sqlite3 = require('../../node_modules/sqlite3').verbose()
 //const sqlite3 = require('../Server/node_modules/sqlite3').verbose()
-const sqlite3 = require('../"app_7a6494a2-dba4-4d14-9015-79a8d41453d7"/node_modules/sqlite3').verbose()
+const sqlite3 = require('../app_7a6494a2-dba4-4d14-9015-79a8d41453d7/node_modules/sqlite3').verbose()
 
 
 var bodyParser = require('body-parser')
