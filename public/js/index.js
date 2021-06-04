@@ -260,8 +260,8 @@ function selectGroupSetOptions() {
   url = `http://${serverAdress}/get_groups`
   fetch(url, {
     method: 'GET',
-    //mode: 'no-cors',
-    mode: 'navigate',
+    mode: 'no-cors',
+    //mode: 'navigate',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
     }
