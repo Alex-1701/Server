@@ -261,10 +261,11 @@ function selectGroupSetOptions() {
   console.log(url)
   fetch(url, {
     method: 'GET',
-    mode: 'no-cors',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8'
-    }
+    //mode: 'no-cors',
+    headers: {  
+      'Content-Type': 'application/json'
+    },
+    credentials: "include" // ?
   })
   .then((response) => {
     return response.json();
