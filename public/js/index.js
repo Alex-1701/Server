@@ -4,8 +4,9 @@ var signInForm = document.getElementById("sign_in_form")
 var registerForm = document.getElementById("register_form")
 var statusBar = document.getElementById("status")
 const port = 8080
-//const serverAdress = "app-7a6494a2-dba4-4d14-9015-79a8d41453d7.cleverapps.io"//for Server
-const serverAdress =   "app_e5cc70ae-bb85-4b52-a5ce-18603c0b921e.cleverapps.io"//for Server2
+//const serverAdress = "app-7a6494a2-dba4-4d14-9015-79a8d41453d7.cleverapps.io"// Server
+//const serverAdress = "app_e5cc70ae-bb85-4b52-a5ce-18603c0b921e.cleverapps.io"// Server 2
+  const serverAdress = "app_17647f6f-f098-412c-9bdc-3b33c482bbec.cleverapps.io"// Server 3
 //#endregion
 function userStatusShortName(str = null) {
   // Возвращает одно/двух буквенный код статуса. Например Student = S.
