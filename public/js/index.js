@@ -258,10 +258,10 @@ function updateWorkspace() {
 function selectGroupSetOptions() {
   // Генерирует выпадающий список групп
   url = `http://${serverAdress}/get_groups`
+  console.log(url)
   fetch(url, {
     method: 'GET',
-    mode: '*cors',
-    //mode: 'same-origin',
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
     }
