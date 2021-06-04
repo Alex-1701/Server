@@ -3,6 +3,8 @@ var workSpace = document.getElementById("main_workspace")
 var signInForm = document.getElementById("sign_in_form")
 var registerForm = document.getElementById("register_form")
 var statusBar = document.getElementById("status")
+const port = 8080
+const serverAdress = "app-7a6494a2-dba4-4d14-9015-79a8d41453d7.cleverapps.io"
 //#endregion
 function userStatusShortName(str = null) {
   // Возвращает одно/двух буквенный код статуса. Например Student = S.
@@ -26,7 +28,8 @@ function signIn() {
   // Функция инициирует обновление рабочего простанства.
   var login = document.getElementById("login").value;
   var password = document.getElementById("password").value;
-  var url = "http://localhost:8080/signin" + "?login=" + login + "&password=" + password
+  //var url = "http://localhost:8080/signin" + "?login=" + login + "&password=" + password
+  var url = `http://${serverAdress}/signin?login=${login}&password=${password}`
   fetch(url, {
     method: 'GET', 
     mode: 'no-cors',
@@ -64,7 +67,9 @@ function register() {
       }
     }
   }
-  url = "http://localhost:8080/register"
+  //url = "http://localhost:8080/register"
+  //url = `http://localhost:${port}/register`
+  url = `http://${serverAdress}/register`
   fetch(url, {
     method: 'POST', 
     headers: {
@@ -178,7 +183,7 @@ function getData(){
   
   console.log("request:")
   console.log(reguestObject)
-  url = "http://localhost:8080/commonpost"
+  url = `http://${serverAdress}/commonpost`
   fetch(url, {
     method: 'POST', 
     headers: {
@@ -250,7 +255,7 @@ function updateWorkspace() {
 }
 function selectGroupSetOptions() {
   // Генерирует выпадающий список групп
-  url = "http://localhost:8080/get_groups"
+  url = `http://${serverAdress}/get_groups`
   fetch(url, {
     method: 'GET', 
     headers: {
