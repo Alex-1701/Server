@@ -1,4 +1,6 @@
-const sqlite3 = require('../../node_modules/sqlite3').verbose()
+//const sqlite3 = require('../../node_modules/sqlite3').verbose()
+const sqlite3 = require('../Server/node_modules/sqlite3').verbose()
+
 function getJournal(status, id, value, res) {
   // Запрос к журналу может выполнять студент, тогда он получит журнал своей группы.
   // Или любой другой пользователь, тогда он должен указать группу.
