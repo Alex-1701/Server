@@ -261,7 +261,7 @@ function selectGroupSetOptions() {
   console.log(url)
   fetch(url, {
     method: 'GET',
-    //mode: 'no-cors',
+    mode: 'cors',
     headers: {  
       'Content-Type': 'application/json'
     },
