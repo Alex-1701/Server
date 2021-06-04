@@ -261,7 +261,7 @@ function selectGroupSetOptions() {
   fetch(url, {
     method: 'GET',
     //mode: 'no-cors',
-    mode: 'same-origin',
+    //mode: 'same-origin',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
     }
