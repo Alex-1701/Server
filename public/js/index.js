@@ -258,7 +258,8 @@ function selectGroupSetOptions() {
   // Генерирует выпадающий список групп
   url = `http://${serverAdress}/get_groups`
   fetch(url, {
-    method: 'GET', 
+    method: 'GET',
+    mode: 'no-cors',
     headers: {
     'Content-Type': 'application/json;charset=utf-8'
     }
