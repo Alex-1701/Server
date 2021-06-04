@@ -260,7 +260,7 @@ function selectGroupSetOptions() {
   fetch(url, {
     method: 'GET',
     //mode: 'no-cors',
-    mode: 'same-origin',
+    mode: 'navigate',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
     }
