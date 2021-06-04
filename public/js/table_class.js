@@ -75,7 +75,7 @@ class Table {
         class_number: class_number,
       }
     }
-    url = "http://localhost:3000/commonpost"
+    url = `http://${serverAdress}/commonpost`
   
     fetch(url, {
       method: 'POST', 
