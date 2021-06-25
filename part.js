@@ -1,8 +1,8 @@
 //const sqlite3 = require('../../node_modules/sqlite3').verbose()
 //const sqlite3 = require('../Server/node_modules/sqlite3').verbose()
-//const sqlite3 = require('../app_7a6494a2-dba4-4d14-9015-79a8d41453d7/node_modules/sqlite3').verbose() // Server
+const sqlite3 = require('../app_7a6494a2-dba4-4d14-9015-79a8d41453d7/node_modules/sqlite3').verbose() // Server
 //const sqlite3 = require('../app_e5cc70ae-bb85-4b52-a5ce-18603c0b921e/node_modules/sqlite3').verbose() // Server2
-  const sqlite3 = require('../app_17647f6f-f098-412c-9bdc-3b33c482bbec/node_modules/sqlite3').verbose() // Server3
+//const sqlite3 = require('../app_17647f6f-f098-412c-9bdc-3b33c482bbec/node_modules/sqlite3').verbose() // Server3
 
 function getJournal(status, id, value, res) {
   // Запрос к журналу может выполнять студент, тогда он получит журнал своей группы.

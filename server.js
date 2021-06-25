@@ -6,9 +6,9 @@ const port = 8080
 //const sqlite3 = require('../Server/node_modules/sqlite3').verbose() // actual for localhost
 //const serverAdress =       "app-7a6494a2-dba4-4d14-9015-79a8d41453d7.cleverapps.io"
  
-//const sqlite3 = require('../app_7a6494a2-dba4-4d14-9015-79a8d41453d7/node_modules/sqlite3').verbose() // Server
+const sqlite3 = require('../app_7a6494a2-dba4-4d14-9015-79a8d41453d7/node_modules/sqlite3').verbose() // Server
 //const sqlite3 = require('../app_e5cc70ae-bb85-4b52-a5ce-18603c0b921e/node_modules/sqlite3').verbose() // Server2
-  const sqlite3 = require('../app_17647f6f-f098-412c-9bdc-3b33c482bbec/node_modules/sqlite3').verbose() // Server3
+//const sqlite3 = require('../app_17647f6f-f098-412c-9bdc-3b33c482bbec/node_modules/sqlite3').verbose() // Server3
 var bodyParser = require('body-parser')
 // for parsing application/json
 app.use(bodyParser.json()) 
